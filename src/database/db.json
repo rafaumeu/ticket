@@ -8,6 +8,15 @@
             "status": "open",
             "created_at": "2024-10-28T10:00:40.574Z",
             "updated_at": "2024-10-28T10:00:40.574Z"
+        },
+        {
+            "id": "354dcea7-5b2b-494a-9537-7df7a4757e27",
+            "equipment": "teclado",
+            "description": "A tecla de espaço não funciona",
+            "user_name": "João",
+            "status": "open",
+            "created_at": "2024-10-28T10:09:07.890Z",
+            "updated_at": "2024-10-28T10:09:07.890Z"
         }
     ]
 }
