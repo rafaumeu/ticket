@@ -4,7 +4,8 @@ import { routes } from "../routes/index.js";
 const database = new Database()
 export function routeHandler(req, res) {
   const route = routes.find((route) => {
-    return route.method === req.method && route.path === req.url
+    
+    return route.method === req.method && route.path.test(req.url)
   })
 
   if(route) {
@@ -12,5 +13,5 @@ export function routeHandler(req, res) {
   }
   
 
-  return response.writeHead(404).end()
+  return res.writeHead(404).end()
 }
