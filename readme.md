@@ -1,112 +1,51 @@
-# 🎫 Ticket Management API
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=180&section=header&text=Ticket%20Manager%20&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Node.js%20Ticket%20System%20—%20No%20Frameworks&descSize=18&descAlignY=52"/>
+</div>
 
-![Node.js](https://img.shields.io/badge/Node.js-v18+-green)
-![License](https://img.shields.io/badge/License-ISC-blue)
-![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)
+<p align="center">
+  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript) ![No Framework](https://img.shields.io/badge/No_Framework-FF0080?style=for-the-badge)
+</p>
 
-## 📝 Project Description
+## Overview
 
-A simple support ticket management API developed with pure Node.js, without external frameworks.
+A ticket management system built with **pure Node.js** — no Express, no frameworks. Uses the native `http` module to demonstrate fundamental Node.js concepts and HTTP handling from scratch.
 
-## 🚀 Technical Learning Insights
+## Features
 
-### 🔧 Architecture and Structure
+- Ticket creation and management
+- Pure Node.js HTTP server
+- File-based data persistence
+- RESTful endpoint design
+- No external dependencies for routing
 
-- Implementation of a REST API from scratch
-- Modular architecture with separated responsibilities
-- Usage of native Node.js modules (`http`, fs, crypto)
+## Tech Stack
 
-### 📂 Directory Structure
+| Technology | Purpose |
+|---|---|
+| **Node.js** | Runtime (native HTTP module) |
+| **JavaScript** | Core language |
 
-```
-src/
-├── controllers/
-├── database/
-├── middlewares/
-├── routes/
-├── utils/
-└── server.js
-```
-
-### 💡 Key Techniques
-
-#### 1. Custom Routing
-
-- Route system creation without frameworks
-- Use of regular expressions for dynamic route parsing
-- Support for parameters and query strings
-
-#### 2. Data Persistence
-
-- Simple JSON database implementation
-- Persistence methods:
-  - insert()
-  - select()
-  - update()
-  - delete()
-
-#### 3. Custom Middlewares
-
-- jsonHandler: JSON request body processing
-- routeHandler: Dynamic request routing
-
-### 🛠️ Features
-
-- [x] Ticket creation
-- [x] Ticket listing
-- [x] Ticket update
-- [x] Ticket closure
-- [x] Ticket removal
-- [x] Status filtering
-
-## 🌟 Main Technologies
-
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
-![Node.js](https://img.shields.io/badge/Node.js-Vanilla-green)
-![JSON](https://img.shields.io/badge/Database-JSON-orange)
-
-## 🚀 How to Run the Project
-
-1. Clone the repository
-2. Install dependencies
+## Getting Started
 
 ```bash
+git clone https://github.com/rafaumeu/ticket.git
+cd ticket
 npm install
+npm start
 ```
 
-3. Run the project
+## What I Learned
 
-```bash
-npm run dev
-```
+- Node.js native `http` module internals
+- Request/response handling without abstractions
+- File system operations for data persistence
+- Building routing logic from scratch
 
-## 📋 Endpoints
+## License
 
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | /tickets | Create new ticket |
-| GET | /tickets | List tickets |
-| PUT | /tickets/:id | Update ticket |
-| PATCH | /tickets/:id/close | Close ticket |
-| DELETE | /tickets/:id | Remove ticket |
+MIT
 
-## 🧠 Key Challenges Overcome
-
-* Route handling without frameworks
-- Data persistence in JSON file
-- Request stream processing
-- Dynamic routing with parameters
-
-## 🤝 Contributing
-
-Feel free to contribute!
-- Fork the project
-- Create your feature branch (`git checkout -b feature/AmazingFeature`)
-- Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-- Push to the branch (`git push origin feature/AmazingFeature`)
-
-## 📄 License
-
-Distributed under the ISC License. See `LICENSE` for more information.
-
-🚀 Developed by Rafael Dias Zendron
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=FF0080&height=100&section=footer"/>
+  <br/><sub>Built with ❤️ by <a href="https://github.com/rafaumeu">Rafael Zendron</a></sub>
+</div>
