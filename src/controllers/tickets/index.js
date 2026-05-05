@@ -1,7 +1,22 @@
 export function index({req, res, database}) {
-  const { status } = req.query;
-  
+  const { status, priority, search } = req.query;
+
   const filters = status ? { status } : undefined;
-  const tickets = database.select("tickets", filters);
+  let tickets = database.select("tickets", filters);
+
+  if (priority) {
+    tickets = tickets.filter(ticket =>
+      ticket.priority && ticket.priority.toUpperCase() === priority.toUpperCase()
+    );
+  }
+
+  if (search) {
+    const keyword = search.toLowerCase();
+    tickets = tickets.filter(ticket =>
+      (ticket.equipment && ticket.equipment.toLowerCase().includes(keyword)) ||
+      (ticket.description && ticket.description.toLowerCase().includes(keyword))
+    );
+  }
+
   return res.writeHead(200).end(JSON.stringify(tickets));
 }
