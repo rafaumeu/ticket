@@ -4,7 +4,7 @@
   <a href="https://github.com/rafaumeu/ticket/generate"><img src="https://img.shields.io/badge/Use_This_Template-FFCA28?style=for-the-badge&logo=github&logoColor=white" alt="Use this template"/></a>
 
 <p align="center">
-  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript) ![No Framework](https://img.shields.io/badge/No_Framework-FFCA28?style=for-the-badge)
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodejs"/> <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript"/> <img alt="No Framework" src="https://img.shields.io/badge/No_Framework-FFCA28?style=for-the-badge"/>
 </p>
 
 ## Overview
