@@ -18,6 +18,7 @@ A ticket management system built with **pure Node.js** — no Express, no framew
 - File-based data persistence
 - RESTful endpoint design
 - No external dependencies for routing
+- Deployed on Vercel as serverless function
 
 ## Tech Stack
 
@@ -34,6 +35,23 @@ cd ticket
 npm install
 npm start
 ```
+
+## Live Demo
+
+The API is deployed on Vercel as a serverless function:
+
+> **Base URL:** `https://ticket-<hash>.vercel.app/api`
+
+| Method  | Endpoint              | Description            |
+|---------|-----------------------|------------------------|
+| `GET`   | `/api/tickets`        | List all tickets       |
+| `POST`  | `/api/tickets`        | Create a new ticket    |
+| `GET`   | `/api/tickets/stats`  | Ticket statistics      |
+| `PUT`   | `/api/tickets/:id`    | Update a ticket        |
+| `PATCH` | `/api/tickets/:id/close` | Close a ticket      |
+| `DELETE`| `/api/tickets/:id`    | Delete a ticket        |
+
+> **Note:** File-based JSON storage is used — data resets on each cold start. For persistent data, swap in a real database.
 
 ## What I Learned
 
