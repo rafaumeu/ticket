@@ -1,4 +1,4 @@
-export function stats({req, res, database}) {
+export function stats({ _req, res, database }) {
   const tickets = database.select("tickets");
 
   const byStatus = {};
@@ -12,9 +12,11 @@ export function stats({req, res, database}) {
     byPriority[priority] = (byPriority[priority] || 0) + 1;
   }
 
-  return res.writeHead(200).end(JSON.stringify({
-    total: tickets.length,
-    byStatus,
-    byPriority,
-  }));
+  return res.writeHead(200).end(
+    JSON.stringify({
+      total: tickets.length,
+      byStatus,
+      byPriority,
+    }),
+  );
 }
