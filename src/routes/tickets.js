@@ -9,7 +9,7 @@ export const tickets = [
   {
     method: "POST",
     path: "/tickets",
-    controller: create
+    controller: create,
   },
   {
     method: "GET",
@@ -29,11 +29,11 @@ export const tickets = [
   {
     method: "PATCH",
     path: "/tickets/:id/close",
-    controller: updateStatus
+    controller: updateStatus,
   },
   {
     method: "DELETE",
     path: "/tickets/:id",
-    controller: remove
-  }
-]
+    controller: remove,
+  },
+];
