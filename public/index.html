@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Manager API</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .section h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .endpoint {
+      background: #f7f7f7;
+      border-left: 4px solid #667eea;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .endpoint .method {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      margin-right: 10px;
+    }
+    .endpoint .method.post { background: #48bb78; }
+    .endpoint .method.put { background: #ed8936; }
+    .endpoint .method.patch { background: #9f7aea; }
+    .endpoint .method.delete { background: #f56565; }
+    .endpoint .path {
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      color: #333;
+    }
+    .endpoint .description {
+      margin-top: 8px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #666;
+    }
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .badges {
+      margin-bottom: 20px;
+    }
+  </style>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { 
+      (window.vaq = window.vaq || []).push(arguments); 
+    };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎫 Ticket Manager API</h1>
+    <p class="subtitle">A pure Node.js ticket management system - no frameworks, just native HTTP</p>
+    
+    <div class="badges">
+      <span class="badge">Node.js 22</span>
+      <span class="badge">Pure JavaScript</span>
+      <span class="badge">No Framework</span>
+      <span class="badge">Vercel Serverless</span>
+    </div>
+
+    <div class="section">
+      <h2>📋 Features</h2>
+      <ul style="margin-left: 20px; color: #666;">
+        <li>Create, update, and delete tickets</li>
+        <li>View ticket statistics</li>
+        <li>Filter and list tickets</li>
+        <li>RESTful API design</li>
+        <li>File-based JSON persistence</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔌 API Endpoints</h2>
+      
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/api/tickets</span>
+        <div class="description">List all tickets</div>
+      </div>
+      
+      <div class="endpoint">
+        <span class="method post">POST</span>
+        <span class="path">/api/tickets</span>
+        <div class="description">Create a new ticket</div>
+      </div>
+      
+      <div class="endpoint">
+        <span class="method">GET</span>
+        <span class="path">/api/tickets/stats</span>
+        <div class="description">Get ticket statistics</div>
+      </div>
+      
+      <div class="endpoint">
+        <span class="method put">PUT</span>
+        <span class="path">/api/tickets/:id</span>
+        <div class="description">Update an existing ticket</div>
+      </div>
+      
+      <div class="endpoint">
+        <span class="method patch">PATCH</span>
+        <span class="path">/api/tickets/:id/close</span>
+        <div class="description">Close a ticket</div>
+      </div>
+      
+      <div class="endpoint">
+        <span class="method delete">DELETE</span>
+        <span class="path">/api/tickets/:id</span>
+        <div class="description">Delete a ticket</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💡 Tech Stack</h2>
+      <ul style="margin-left: 20px; color: #666;">
+        <li><strong>Runtime:</strong> Node.js 22 (native http module)</li>
+        <li><strong>Testing:</strong> Vitest</li>
+        <li><strong>Linting:</strong> Biome</li>
+        <li><strong>Deployment:</strong> Vercel Serverless Functions</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>Built with ❤️ by <a href="https://github.com/rafaumeu" target="_blank" rel="noopener noreferrer">Rafael Zendron</a></p>
+      <p style="margin-top: 10px;">
+        <a href="https://github.com/rafaumeu/ticket" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
