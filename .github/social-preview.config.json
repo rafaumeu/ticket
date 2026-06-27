@@ -1,0 +1,13 @@
+{
+  "title": "Ticket API",
+  "subtitle": "Lightweight support ticket system",
+  "accent": "#1ABC9C",
+  "darkMode": true,
+  "emoji": "\ud83c\udfab",
+  "tags": [
+    "nodejs",
+    "fastify",
+    "typescript"
+  ],
+  "author": "Rafael Zendron"
+}
